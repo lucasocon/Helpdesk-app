@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="Dashboard">
+        <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+        <title>HELPDESK - The BEST dashboard for you company!</title>
+
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag 'application' %>
+        <%= csrf_meta_tags %>
+  </head>
+  <body>
+  <!-- Navigation -->
+    <% if flash[:notice] -%>
+      <div class = "alert alert-info"><%= flash[:notice] %></div>
+    <% end %>
+
+    <% if flash[:alert] -%>
+      <div class = "alert alert-warning"><%= flash[:notice] %></div>
+    <% end %>
+
+    <%= yield %>
+
+  </body>
+</html>
+

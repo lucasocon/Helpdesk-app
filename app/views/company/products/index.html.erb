@@ -1,0 +1,37 @@
+<div class="col-lg-9 main-chart">
+  <div class="row mt">
+    <% products_all.each do |product| %>
+    <div class="col-md-4 col-sm-4 mb">
+      <div class="white-panel pn">
+        <div class="white-header">
+          <h5><%= product.name %></h5>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 col-xs-6 goleft">
+            <p><i class="fa fa-heart"></i><%= rand(100) %></p>
+          </div>
+          <div class="col-sm-6 col-xs-6"></div>
+        </div>
+        <div class="centered">
+          <%= image_tag product.image.url(:thumb) %>
+        </div>
+      </div>
+    </div><!-- /col-md-4 -->
+    <% end %>
+    <div class="col-md-4 col-sm-4 mb">
+      <div class="white-panel pn">
+        <div class="white-header">
+          <h5>Coming up!</h5>
+        </div>
+        <br>
+        <img src="/assets/coming.jpg" class="centered" width="100"/>
+        <div class="row">
+          <div class="col-md-6">
+            <p class="small mt">AT</p>
+            <p>2015</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

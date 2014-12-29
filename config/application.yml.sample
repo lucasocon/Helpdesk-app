@@ -1,0 +1,11 @@
+development:
+  SECRET_KEY_BASE: "run rake secret and paste a decent token here"
+  DEVISE_SECRET: "run rake secret and paste a decent token here"
+  DEVISE_PEPPER: "run rake secret and paste a decent token here"
+  DEFAULT_EMAIL: "no-reply@localhost.dev"
+
+test:
+  SECRET_KEY_BASE: "run rake secret and paste a decent token here"
+  DEVISE_SECRET: "run rake secret and paste a decent token here"
+  DEVISE_PEPPER: "run rake secret and paste a decent token here"
+  DEFAULT_EMAIL: "no-reply@localhost.test"

@@ -1,0 +1,35 @@
+<div id="login-page">
+  <div class="container">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => {:class => "form-login"}) do |f| %>
+    <h2 class="form-login-heading">Log in</h2>
+    <div class="login-wrap">
+      <br>
+      <%= f.email_field :email, class: "form-control", placeholder: "Email", autofocus: true  %>
+      <br>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
+      <br>
+      <% if devise_mapping.rememberable? -%>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end -%>
+      <br>
+      <%= f.submit "Log in", class: "btn btn-theme btn-block " %>
+      <hr>
+
+      <div class="login-social-link centered">
+        <p>or you can login via your social network</p>
+          <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
+          <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
+      </div>
+    </div>
+  <%end%>
+  </div>
+</div>
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script>
+        $.backstretch("/assets/login2.jpg", {speed: 500});
+    </script>

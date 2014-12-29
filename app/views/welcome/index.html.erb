@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="container">
+      <h1>HelpDesk App</h1>
+      <p><%= title %></p>
+
+      <div class="call-to-action">
+        <h2>
+            <%= link_to "Sign in now!", new_user_session_path, class: 'btn btn-primary btn-lg' %>
+        </h2>
+
+        <h2>
+            <%= link_to "Sign up for free!", signup_path, class: 'btn btn-primary btn-lg' %>
+        </h2>
+      </div>
+
+      <% if user_signed_in? %>
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: 'btn btn-primary btn-lg' %></h4></li>
+      <% end %>
+    </div>
+  </div>
+
+
+    <!-- js placed at the end of the document so the pages load faster -->
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script>
+        $.backstretch("/assets/index-bg.jpg", {speed: 500});
+    </script>
+
+

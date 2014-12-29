@@ -1,0 +1,31 @@
+      <!--sidebar start-->
+<aside>
+  <div id="sidebar"  class="nav-collapse ">
+      <!-- sidebar menu start-->
+      <ul class="sidebar-menu" id="nav-accordion">
+
+          <p class="centered"><a href="<%= url_for dashboard_path %>"><img src="/assets/ui-danro.jpg" class="img-circle" width="60"></a></p>
+          <h5 class="centered"><%= current_company.name %> </h5>
+
+          <li class="mt">
+              <a href="<%= url_for dashboard_path %>">
+                  <i class="fa fa-dashboard"></i>
+                  <span>Dashboard</span>
+              </a>
+          </li>
+
+        <li class="sub-menu">
+              <a href="javascript:;" >
+                  <i class="fa fa-cogs"></i>
+                  <span>Products</span>
+              </a>
+              <ul class="sub">
+                  <li><a  href="<%= url_for products_all_path %>">All Products</a></li>
+                  <li><a  href="<%= url_for new_product_path %>">Create a Product</a></li>
+              </ul>
+          </li>
+      </ul>
+      <!-- sidebar menu end-->
+  </div>
+</aside>
+      <!--sidebar end-->

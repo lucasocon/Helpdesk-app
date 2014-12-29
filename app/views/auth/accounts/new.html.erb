@@ -1,0 +1,35 @@
+<div id="login-page">
+  <div class="container">
+    <%= form_for account, :html => {:class => "form-login"}, url: signup_path do |f|  %>
+    <% if account.errors.any? %>
+      <ul>
+        <% account.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <h2 class="form-login-heading">sign up now</h2>
+    <div class="login-wrap">
+      <%= f.text_field :company_name, autofocus: true, class: "form-control", placeholder: "Company Name" %>
+      <br>
+      <%= f.email_field :email, class: "form-control", placeholder: "Email"  %>
+      <br>
+      <%= f.password_field :password, autocomplete: "off", class: "form-control", placeholder: "Password" %>
+      <br>
+      <%= f.submit "Sign up", class: "btn btn-theme btn-block " %>
+      <hr>
+
+      <div class="login-social-link centered">
+        <p>or you can sign up via your social network</p>
+        <button class="btn btn-facebook" type="submit"><i class="fa fa-facebook"></i> Facebook</button>
+        <button class="btn btn-twitter" type="submit"><i class="fa fa-twitter"></i> Twitter</button>
+      </div>
+    </div>
+  <%end%>
+  </div>
+</div>
+
+    <!--BACKSTRETCH-->
+  <script>
+      $.backstretch("/assets/login-bg.jpg", {speed: 500});
+  </script>

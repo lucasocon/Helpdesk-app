@@ -1,0 +1,30 @@
+<div class="col-lg-9 main-chart">
+  <div class="row">
+    <div class="container">
+      <div class="white-header">
+        <h3>New Product</h3>
+      </div>
+      <%= form_for product, :html => { multipart: true } do |f| %>
+
+      <div class="field">
+        <%= f.label :name %><br />
+        <%= f.text_field :name, class: "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :description %><br />
+        <%= f.text_area :description, rows: 5, class: "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :image %><br />
+        <%= f.file_field :image, class: "form-control" %>
+      </div>
+      <br />
+      <ul>
+        <li><%= f.submit "Create Product", class: "btn btn-primary btn-lg" %></li>
+      </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
