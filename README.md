@@ -15,7 +15,7 @@ Quick start
 If you satisfy all the dependencies you can clone the repository via git:
 
 ```
-$ git clone git@gitlab.com:i4u/helpdesk-app.git
+$ git clone git@github.com:i4u/helpdesk-app.git
 ```
 
 And then go to your project folder and run:
